@@ -1,15 +1,13 @@
 ---
 import { Image } from 'astro:assets'
-import Section from '@layouts/Section.astro'
-import Container from '@layouts/Container.astro'
 import Button from './Button.astro'
 
 import bgIllustration1 from '@assets/bg-illustration-1.svg'
 import heroIllustration from '@assets/hero-illustration.svg'
 ---
 
-<Section id="hero">
-  <Container>
+<section class="section" id="hero">
+  <div class="container">
     <div class="hero-container">
       <div class="hero-container--left">
         <h1 class="font-rubik hero-title">
@@ -41,8 +39,8 @@ import heroIllustration from '@assets/hero-illustration.svg'
         <Image class="hero-img" src={heroIllustration} alt="App de EzPark" />
       </div>
     </div>
-  </Container>
-</Section>
+  </div>
+</section>
 
 <style>
   .hero-container {
