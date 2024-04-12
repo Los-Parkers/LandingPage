@@ -1,0 +1,86 @@
+---
+import { Image } from 'astro:assets'
+import Section from '@layouts/Section.astro'
+import Container from '@layouts/Container.astro'
+import Button from './Button.astro'
+
+import bgIllustration1 from '@assets/bg-illustration-1.svg'
+import heroIllustration from '@assets/hero-illustration.svg'
+---
+
+<Section id="hero">
+  <Container>
+    <div class="hero-container">
+      <div class="hero-container--left">
+        <h1 class="font-rubik hero-title">
+          Estaciona <span class="font-rubik">rápido</span> y ahorra <span
+            class="font-rubik">tiempo</span
+          >
+        </h1>
+        <h2 class="font-rubik hero-subtitle">
+          Encuentra fácilmente estacionamiento desde la comodidad de tu
+          dispositivo
+        </h2>
+        <Button>Conocer más</Button>
+      </div>
+      <div class="hero-container--right">
+        <div class="hero-container--right-bg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="547"
+            height="463"
+            viewBox="0 0 547 463"
+            fill="none"
+          >
+            <path
+              opacity="0.1"
+              d="M544.492 315.29C529.552 238.443 442.023 177.025 424.952 96.9459C393.924 -4.93677 291.654 -21.0446 225.197 23.203C119.896 93.3139 232.231 110.712 25.7692 276.591C-25.2107 317.549 -8.96621 498.35 151.414 456.857C237.723 434.527 263.961 431.394 302.784 427.716C400.637 418.45 569.57 444.286 544.492 315.29Z"
+              fill="#367CFF"></path>
+          </svg>
+        </div>
+        <Image class="hero-img" src={heroIllustration} alt="App de EzPark" />
+      </div>
+    </div>
+  </Container>
+</Section>
+
+<style>
+  .hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.4rem;
+  }
+  .hero-title,
+  .hero-title span {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+    text-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+  }
+  .hero-title {
+    color: var(--color-primary-500);
+    margin-bottom: 1.6rem;
+  }
+  .hero-title span {
+    color: var(--color-secondary-400);
+  }
+  .hero-subtitle {
+    font-size: 2.4rem;
+    line-height: 4rem;
+    font-weight: 400;
+    color: var(--color-text);
+    margin-bottom: 3.6rem;
+  }
+  .hero-container--right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-container--right-bg {
+    position: absolute;
+  }
+  .hero-img {
+    position: relative;
+  }
+</style>
