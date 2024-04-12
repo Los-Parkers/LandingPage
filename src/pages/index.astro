@@ -1,9 +1,10 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import Header from '@components/Header.astro'
-import Hero from '@components/Hero.astro'
-import Product from '@components/Product.astro'
-import Features from '@components/Features.astro'
+import Header from 'src/modules/Header.astro'
+import Hero from 'src/modules/Hero.astro'
+import Product from 'src/modules/Product.astro'
+import Features from 'src/modules/Features.astro'
+import Reviews from '@modules/Reviews.astro'
 ---
 
 <Layout title="EzPark | Reserva tu estacionamiento">
@@ -12,5 +13,6 @@ import Features from '@components/Features.astro'
     <Hero />
     <Product />
     <Features />
+    <Reviews />
   </main>
 </Layout>

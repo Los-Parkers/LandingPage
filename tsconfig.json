@@ -1,10 +1,16 @@
 {
   "compilerOptions": {
+    "jsx": "react",
+    "target": "ES5",
+    "module": "CommonJS",
     "baseUrl": ".",
+    "outDir": "./dist",
+    "esModuleInterop": true,
     "paths": {
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
-      "@layouts/*": ["src/layouts/*"]
+      "@layouts/*": ["src/layouts/*"],
+      "@modules/*": ["src/modules/*"]
     }
   }
 }
