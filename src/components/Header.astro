@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+import Button from './Button.astro'
+import logo from '@assets/logo.svg'
+
+const navlinks = [
+  {
+    title: 'Producto',
+    href: '#',
+  },
+  {
+    title: 'Testimonios',
+    href: '#',
+  },
+  {
+    title: 'Precios',
+    href: '#',
+  },
+  {
+    title: 'Sobre nosotros',
+    href: '#',
+  },
+]
+---
+
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar--left">
+      <a href="#">
+        <Image src={logo} alt="EzPark logo" />
+      </a>
+    </div>
+    <div class="navbar--right">
+      <ul class="navbar--right__navlinks">
+        {
+          navlinks.map((navlink) => (
+            <li>
+              <a class="navlink" href={navlink.href}>
+                {navlink.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <div class="divider"></div>
+      <div class="navbar--right__auth">
+        <a href="#" class="navlink register">Registrar</a>
+        <Button>Iniciar Sesión</Button>
+      </div>
+    </div>
+  </nav>
+
+  <style>
+    .header {
+      padding-inline: 4.8rem;
+    }
+    .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 8rem;
+    }
+    .divider {
+      height: 2.4rem;
+      width: 1px;
+      background: var(--color-primary-500);
+    }
+    .navbar--right {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+    }
+    .navbar--right__navlinks {
+      display: flex;
+      list-style: none;
+      gap: 2.4rem;
+    }
+    .navlink {
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      color: var(--color-title);
+      text-decoration: none;
+      font-weight: 700;
+    }
+    .navbar--right__auth {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+    }
+    .register {
+      text-decoration: underline;
+    }
+  </style>
+</header>
