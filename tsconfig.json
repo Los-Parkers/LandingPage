@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react",
-    "target": "ES5",
+    "target": "ES2022",
     "module": "CommonJS",
     "baseUrl": ".",
     "outDir": "./dist",
@@ -10,7 +10,9 @@
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@modules/*": ["src/modules/*"]
+      "@modules/*": ["src/modules/*"],
+      "@typings/*": ["src/typings/*"],
+      "@data/*": ["src/data/*"]
     }
   }
 }
