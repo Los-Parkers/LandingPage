@@ -1,4 +1,3 @@
-import React from 'react'
 import type { FC, HTMLAttributes } from 'react'
 
 import styles from './Dot.module.css'

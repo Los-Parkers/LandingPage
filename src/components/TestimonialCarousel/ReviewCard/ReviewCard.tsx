@@ -1,6 +1,7 @@
-import React, { type FC } from 'react'
+import { type FC } from 'react'
 import type { Review } from '@typings/Review'
 import styles from './ReviewCard.module.css'
+import Image from 'astro/components/Image.astro'
 
 interface ReviewCardProps {
   review: Review
@@ -12,7 +13,7 @@ const ReviewCard: FC<ReviewCardProps> = ({
     <article className={styles.reviewCard}>
       <header className={styles.reviewCardHeader}>
         <div className={styles.reviewerProfileImg}>
-          <img src={imageSrc} alt={name} />
+          <img src={imageSrc} alt={name} loading="lazy" />
         </div>
         <div className={styles.reviewerInfo}>
           <span className={`body-1 ${styles.reviewerName}`}>{name}</span>

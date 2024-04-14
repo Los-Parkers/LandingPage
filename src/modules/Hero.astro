@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets'
 import Button from '@components/Button.astro'
 
-import bgIllustration1 from '@assets/bg-illustration-1.svg'
-import heroIllustration from '@assets/hero-illustration.svg'
+import bgHeroIllustration from '@assets/svg/bg-illustration.svg?raw'
+import heroIllustration from '@assets/svg/hero-illustration.svg'
 ---
 
 <section class="section" id="hero">
@@ -23,20 +23,14 @@ import heroIllustration from '@assets/hero-illustration.svg'
       </div>
       <div class="hero-container--right">
         <div class="hero-container--right-bg">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="547"
-            height="463"
-            viewBox="0 0 547 463"
-            fill="none"
-          >
-            <path
-              opacity="0.1"
-              d="M544.492 315.29C529.552 238.443 442.023 177.025 424.952 96.9459C393.924 -4.93677 291.654 -21.0446 225.197 23.203C119.896 93.3139 232.231 110.712 25.7692 276.591C-25.2107 317.549 -8.96621 498.35 151.414 456.857C237.723 434.527 263.961 431.394 302.784 427.716C400.637 418.45 569.57 444.286 544.492 315.29Z"
-              fill="#367CFF"></path>
-          </svg>
+          <Fragment set:html={bgHeroIllustration} />
         </div>
-        <Image class="hero-img" src={heroIllustration} alt="App de EzPark" />
+        <Image
+          class="hero-img"
+          src={heroIllustration}
+          alt="App de EzPark"
+          loading="eager"
+        />
       </div>
     </div>
   </div>

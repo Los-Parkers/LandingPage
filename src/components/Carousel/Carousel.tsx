@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import type { CSSProperties, FC, ReactNode } from 'react'
 import styles from './Carousel.module.css'
 

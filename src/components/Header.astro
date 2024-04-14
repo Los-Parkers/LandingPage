@@ -1,7 +1,6 @@
 ---
-import { Image } from 'astro:assets'
 import Button from './Button.astro'
-import logo from '@assets/logo.svg'
+import Logo from './Logo.astro'
 
 const navlinks = [
   {
@@ -30,9 +29,7 @@ const navlinks = [
 <header class="header">
   <nav class="navbar">
     <div class="navbar--left">
-      <a href="#">
-        <Image src={logo} alt="EzPark logo" />
-      </a>
+      <Logo type="normal" />
     </div>
     <div class="navbar--right">
       <ul class="navbar--right__navlinks">

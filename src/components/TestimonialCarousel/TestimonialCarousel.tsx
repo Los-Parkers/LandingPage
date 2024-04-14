@@ -1,6 +1,6 @@
 import Carousel from '@components/Carousel'
-import { Review } from '@typings/Review'
-import React, { type FC } from 'react'
+import type { Review } from '@typings/Review'
+import { type FC } from 'react'
 import ReviewCard from './ReviewCard'
 
 interface TestimonialCarouselProps {
